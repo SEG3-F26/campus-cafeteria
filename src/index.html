@@ -4,10 +4,92 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Campus Bites | Home</title>
+  <meta name="description" content="Campus Bites is the university cafeteria. Find our location, opening hours, menu and deals.">
   <link rel="stylesheet" href="../styles/style.css">
 </head>
 <body>
-  <h1>Campus Bites</h1>
-  <p>This page is coming soon.</p>
+  <header class="site-header">
+    <div class="container">
+      <a class="brand" href="index.html">Campus <span>Bites</span></a>
+      <nav class="nav" aria-label="Main">
+        <ul>
+          <li><a href="index.html" aria-current="page">Home</a></li>
+          <li><a href="menu.html">Menu</a></li>
+          <li><a href="deals.html">Deals</a></li>
+          <li><a href="order.html">How to order</a></li>
+          <li><a href="feedback.html">Feedback</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero container">
+      <div class="hero-panel">
+        <div>
+          <h1>Good food between lectures.</h1>
+          <p>Breakfast, lunch and chai, cooked fresh on campus every day.</p>
+        </div>
+        <div class="hero-actions">
+          <a class="button" href="menu.html">See the menu</a>
+          <a class="button button--ghost" href="deals.html">Today's deals</a>
+        </div>
+      </div>
+      <figure class="photo">
+        <img src="https://images.unsplash.com/photo-1769805589566-47a4e0b10c5c?w=1200&q=80&auto=format&fit=crop" alt="A cook in a white cap stands behind large steel pots at the food counter" width="1200" height="1500">
+      </figure>
+    </section>
+
+    <section class="section container">
+      <dl class="hours-strip">
+        <div>
+          <dt>Find us</dt>
+          <dd>Ground floor, Main Academic Block</dd>
+        </div>
+        <div>
+          <dt>Monday to Friday</dt>
+          <dd>8 AM - 8 PM</dd>
+        </div>
+        <div>
+          <dt>Saturday</dt>
+          <dd>9 AM - 4 PM</dd>
+        </div>
+        <div>
+          <dt>Sunday</dt>
+          <dd>Closed</dd>
+        </div>
+      </dl>
+    </section>
+
+    <section class="section container">
+      <h2 class="section-title">What are you here for?</h2>
+      <div class="explore">
+        <a class="tile tile--photo" href="menu.html">
+          <img src="https://images.unsplash.com/photo-1792318970237-3011e0381213?w=1200&q=80&auto=format&fit=crop" alt="A cook stirs a pot at a chai stall with clay cups stacked beside him" loading="lazy">
+          <h3>Menu</h3>
+          <p>Paratha to biryani, chai to kheer.</p>
+        </a>
+        <a class="tile tile--yellow" href="deals.html">
+          <span class="tile-big">Rs 450</span>
+          <h3>Deals</h3>
+        </a>
+        <a class="tile tile--green" href="order.html">
+          <span class="tile-big">4 steps</span>
+          <h3>How to order</h3>
+        </a>
+        <a class="tile tile--plain" href="feedback.html">
+          <h3>Feedback</h3>
+          <p>Liked something? Something went wrong? Tell us.</p>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p class="footer-brand">Campus Bites</p>
+      <p>Ground floor, Main Academic Block<br>Mon-Fri 8 AM - 8 PM, Sat 9 AM - 4 PM</p>
+    </div>
+  </footer>
 </body>
 </html>
