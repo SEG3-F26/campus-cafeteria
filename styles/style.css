@@ -343,3 +343,230 @@
    }
 
    /* ---------- End of base and shared layout ---------- */
+
+
+   /* ---------- Home page (Team Lead) ---------- */
+
+   .hero {
+     display: grid;
+     grid-template-columns: 1.15fr 1fr;
+     gap: 16px;
+     height: clamp(480px, calc(100dvh - 120px), 640px);
+     padding-block: 24px 0;
+   }
+
+   .hero-panel {
+     display: flex;
+     flex-direction: column;
+     justify-content: space-between;
+     gap: 40px;
+     padding: 48px;
+     border-radius: var(--radius);
+     background: var(--marigold);
+     color: var(--on-marigold);
+   }
+
+   .hero-panel ::selection {
+     background: var(--on-marigold);
+     color: var(--marigold);
+   }
+
+   .hero h1 {
+     font-size: clamp(3rem, 7vw, 6rem);
+     font-weight: 800;
+     letter-spacing: -0.05em;
+     line-height: 0.92;
+   }
+
+   .hero p {
+     max-width: 30ch;
+     margin-top: 20px;
+     font-size: 1.25rem;
+   }
+
+   .hero-actions {
+     display: flex;
+     flex-wrap: wrap;
+     gap: 12px;
+   }
+
+   .hero-panel .button {
+     border-color: var(--on-marigold);
+     background: var(--on-marigold);
+     color: var(--marigold);
+   }
+
+   .hero-panel .button--ghost {
+     background: transparent;
+     color: var(--on-marigold);
+   }
+
+   .hero-panel .button--ghost:hover {
+     background: rgb(16 38 30 / 0.1);
+   }
+
+   .hero .photo {
+     min-height: 0;
+   }
+
+   .hours-strip {
+     display: grid;
+     grid-template-columns: 1.2fr 1fr 1fr 1fr;
+     gap: 16px;
+   }
+
+   .hours-strip > div {
+     padding: 28px;
+     border-radius: var(--radius);
+     background: var(--surface);
+     border: 1px solid var(--line);
+   }
+
+   .hours-strip dt {
+     color: var(--muted);
+     font-size: 0.9375rem;
+   }
+
+   .hours-strip dd {
+     margin-top: 6px;
+     font-family: var(--display);
+     font-size: 1.75rem;
+     font-weight: 700;
+     letter-spacing: -0.03em;
+     line-height: 1.1;
+   }
+
+   .explore {
+     display: grid;
+     grid-template-columns: 2fr 1fr 1fr;
+     grid-template-rows: 260px 260px;
+     gap: 16px;
+   }
+
+   .tile {
+     position: relative;
+     display: flex;
+     flex-direction: column;
+     justify-content: flex-end;
+     padding: 28px;
+     overflow: hidden;
+     border-radius: var(--radius);
+     text-decoration: none;
+     transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+   }
+
+   .tile:hover {
+     transform: translateY(-4px);
+   }
+
+   .tile h3 {
+     font-size: 2.25rem;
+   }
+
+   .tile p {
+     margin-top: 4px;
+   }
+
+   .tile--photo {
+     grid-row: span 2;
+     color: #ffffff;
+   }
+
+   .tile--photo img {
+     position: absolute;
+     inset: 0;
+     width: 100%;
+     height: 100%;
+     object-fit: cover;
+     z-index: -1;
+   }
+
+   .tile--photo::before {
+     content: "";
+     position: absolute;
+     inset: 0;
+     z-index: -1;
+     background: linear-gradient(to top, rgb(16 38 30 / 0.85), rgb(16 38 30 / 0) 55%);
+   }
+
+   .tile--photo {
+     isolation: isolate;
+   }
+
+   .tile--yellow {
+     background: var(--marigold);
+     color: var(--on-marigold);
+   }
+
+   .tile--green {
+     background: var(--panel);
+     color: var(--on-panel);
+   }
+
+   .tile--plain {
+     grid-column: span 2;
+     border: 1px solid var(--line);
+     background: var(--surface);
+   }
+
+   .tile-big {
+     font-family: var(--display);
+     font-size: 3.5rem;
+     font-weight: 800;
+     letter-spacing: -0.05em;
+     line-height: 1;
+     margin-bottom: auto;
+   }
+
+   @media (max-width: 900px) {
+     .hero {
+       grid-template-columns: 1fr;
+       height: auto;
+     }
+
+     .hero-panel {
+       padding: 32px 24px;
+     }
+
+     .hero .photo {
+       min-height: 0;
+       aspect-ratio: 4 / 3;
+     }
+
+     .hours-strip {
+       grid-template-columns: 1fr 1fr;
+     }
+
+     .explore {
+       grid-template-columns: 1fr 1fr;
+       grid-template-rows: 320px 220px 220px;
+     }
+
+     .tile--photo {
+       grid-column: span 2;
+       grid-row: auto;
+     }
+   }
+
+   @media (max-width: 520px) {
+     .hours-strip,
+     .explore {
+       grid-template-columns: 1fr;
+       grid-template-rows: none;
+     }
+
+     .tile--photo,
+     .tile--plain {
+       grid-column: auto;
+     }
+
+     .tile {
+       min-height: 200px;
+     }
+
+     .tile--photo {
+       min-height: 300px;
+     }
+   }
+
+   /* ---------- End of home page ---------- */
