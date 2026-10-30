@@ -570,6 +570,117 @@
      }
    }
 
+
+
+/* ---------- Feedback and contact page (Member 4) ---------- */
+
+.contact-layout {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 16px;
+  align-items: start;
+}
+
+.contact-list div {
+  padding-block: 20px;
+}
+
+.contact-list div + div {
+  border-top: 1px solid var(--line);
+}
+
+.contact-list dt {
+  color: var(--muted);
+  font-size: 0.9375rem;
+}
+
+.contact-list dd {
+  margin-top: 4px;
+  font-family: var(--display);
+  font-size: clamp(1.375rem, 2.5vw, 1.875rem);
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  line-height: 1.2;
+}
+
+.contact-list a {
+  text-decoration-color: var(--marigold);
+  text-decoration-thickness: 3px;
+  text-underline-offset: 6px;
+}
+
+.feedback-form {
+  display: grid;
+  gap: 20px;
+  padding: 40px;
+  border-radius: var(--radius);
+  background: var(--marigold);
+  color: var(--on-marigold);
+}
+
+.feedback-form ::selection {
+  background: var(--on-marigold);
+  color: var(--marigold);
+}
+
+.feedback-form h2 {
+  font-size: 2.25rem;
+}
+
+.field {
+  display: grid;
+  gap: 8px;
+}
+
+.field label {
+  font-size: 0.9375rem;
+  font-weight: 600;
+}
+
+.field input,
+.field textarea {
+  width: 100%;
+  padding: 13px 14px;
+  border: 2px solid transparent;
+  border-radius: var(--radius-field);
+  background: #fffdf6;
+  color: #10261e;
+  font: inherit;
+  transition: border-color 0.2s;
+}
+
+.field input:focus,
+.field textarea:focus {
+  border-color: #10261e;
+  outline: none;
+}
+
+.field textarea {
+  min-height: 140px;
+  resize: vertical;
+}
+
+.feedback-form .button {
+  justify-self: start;
+  border-color: #10261e;
+  background: #10261e;
+  color: var(--marigold);
+}
+
+@media (max-width: 860px) {
+  .contact-layout {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .feedback-form {
+    padding: 28px 24px;
+  }
+}
+
+/* ---------- End of feedback and contact page ---------- */
+
+
    /* ---------- End of home page ---------- */
 
 

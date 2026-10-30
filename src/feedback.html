@@ -4,10 +4,77 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Campus Bites | Feedback &amp; Contact</title>
+  <meta name="description" content="Contact Campus Bites or send feedback about the food and service.">
   <link rel="stylesheet" href="../styles/style.css">
 </head>
 <body>
-  <h1>Feedback and contact</h1>
-  <p>This page is coming soon.</p>
+  <header class="site-header">
+    <div class="container">
+      <a class="brand" href="index.html">Campus <span>Bites</span></a>
+      <nav class="nav" aria-label="Main">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="menu.html">Menu</a></li>
+          <li><a href="deals.html">Deals</a></li>
+          <li><a href="order.html">How to order</a></li>
+          <li><a href="feedback.html" aria-current="page">Feedback</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-intro container">
+      <h1>Talk to us</h1>
+      <p>Tell us what to fix, or what to add to the menu.</p>
+    </section>
+
+    <section class="container">
+      <div class="contact-layout">
+        <dl class="contact-list">
+          <div>
+            <dt>Phone</dt>
+            <dd><a href="tel:+924235172846">+92 42 3517 2846</a></dd>
+          </div>
+          <div>
+            <dt>Email</dt>
+            <dd><a href="mailto:hello@campusbites.example">hello@campusbites.example</a></dd>
+          </div>
+          <div>
+            <dt>Counter</dt>
+            <dd>Ground floor, Main Academic Block</dd>
+          </div>
+          <div>
+            <dt>Manager on duty</dt>
+            <dd>Mon-Fri, 10 AM - 6 PM</dd>
+          </div>
+        </dl>
+
+        <form class="feedback-form" action="#" method="post">
+          <h2>Send feedback</h2>
+          <div class="field">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" autocomplete="name" required>
+          </div>
+          <div class="field">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" autocomplete="email" required>
+          </div>
+          <div class="field">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" required></textarea>
+          </div>
+          <button class="button" type="submit">Send feedback</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p class="footer-brand">Campus Bites</p>
+      <p>Ground floor, Main Academic Block<br>Mon-Fri 8 AM - 8 PM, Sat 9 AM - 4 PM</p>
+    </div>
+  </footer>
 </body>
 </html>
