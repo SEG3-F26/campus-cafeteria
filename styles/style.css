@@ -849,3 +849,71 @@
 
 /* ---------- End of deals page ---------- */
 
+
+
+/* ---------- Menu page (Member 1) ---------- */
+
+.menu-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.menu-category {
+  padding: 16px 16px 28px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--surface);
+}
+
+.menu-category .photo {
+  aspect-ratio: 16 / 10;
+  border-radius: 12px;
+}
+
+.menu-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 16px;
+  margin: 24px 12px 12px;
+}
+
+.menu-head h2 {
+  font-size: 2rem;
+}
+
+.menu-time {
+  color: var(--muted);
+  font-size: 0.875rem;
+  white-space: nowrap;
+}
+
+.menu-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  padding: 10px 12px;
+  border-radius: 10px;
+  font-weight: 500;
+  transition: background-color 0.15s;
+}
+
+.menu-list li:hover {
+  background: var(--bg);
+}
+
+@media (max-width: 800px) {
+  .menu-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .menu-head {
+    flex-direction: column;
+    gap: 4px;
+  }
+}
+
+/* ---------- End of menu page ---------- */
+
