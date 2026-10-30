@@ -8,6 +8,7 @@
    buttons and price tags fully round.
    ========================================================== */
 
+
    @import url("https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..800&family=Geist:wght@400;500;600&family=Geist+Mono:wght@500&display=swap");
 
 
@@ -570,3 +571,170 @@
    }
 
    /* ---------- End of home page ---------- */
+
+
+
+/* ---------- Deals page (Member 2) ---------- */
+
+.special {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  height: clamp(400px, 62dvh, 520px);
+}
+
+.special-panel {
+  display: flex;
+  flex-direction: column;
+  padding: 44px;
+  border-radius: var(--radius);
+  background: var(--marigold);
+  color: var(--on-marigold);
+}
+
+.special-panel ::selection {
+  background: var(--on-marigold);
+  color: var(--marigold);
+}
+
+.special-label {
+  font-weight: 600;
+}
+
+.special-panel h2 {
+  margin-top: 12px;
+  font-size: clamp(2.25rem, 4.5vw, 3.75rem);
+  font-weight: 800;
+}
+
+.special-includes {
+  margin-top: 16px;
+  font-size: 1.125rem;
+}
+
+.special-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 16px;
+  margin-top: auto;
+  padding-top: 40px;
+}
+
+.special-price {
+  font-family: var(--display);
+  font-size: clamp(3.5rem, 7vw, 5.5rem);
+  font-weight: 800;
+  letter-spacing: -0.05em;
+  line-height: 0.9;
+}
+
+.special-time {
+  max-width: 16ch;
+  text-align: right;
+  font-size: 0.9375rem;
+}
+
+.combo-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+
+.combo {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-height: 300px;
+  padding: 28px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--surface);
+}
+
+.combo:nth-child(2) {
+  background: var(--panel);
+  border-color: var(--panel);
+  color: var(--on-panel);
+}
+
+.combo h3 {
+  font-size: 1.625rem;
+}
+
+.combo h3 + p {
+  margin-top: 10px;
+  opacity: 0.8;
+}
+
+.combo-sticker {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2px;
+  width: 112px;
+  height: 112px;
+  margin-top: auto;
+  border-radius: 50%;
+  background: var(--marigold);
+  color: var(--on-marigold);
+  font-family: var(--display);
+  font-size: 1.625rem;
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  line-height: 1;
+  text-align: center;
+  outline: 2px dashed var(--on-marigold);
+  outline-offset: -8px;
+  transform: rotate(-8deg);
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.combo:hover .combo-sticker {
+  transform: rotate(0deg) scale(1.05);
+}
+
+.combo-sticker small {
+  font-family: var(--font);
+  font-size: 0.6875rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+
+@media (max-width: 1000px) {
+  .combo-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 760px) {
+  .special,
+  .combo-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .special {
+    height: auto;
+  }
+
+  .special .photo {
+    aspect-ratio: 4 / 3;
+  }
+
+  .special-panel {
+    padding: 28px 24px;
+  }
+
+  .combo {
+    min-height: 0;
+  }
+
+  .combo-sticker {
+    margin-top: 24px;
+  }
+}
+
+/* ---------- End of deals page ---------- */
+
