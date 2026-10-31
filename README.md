@@ -2,7 +2,7 @@
 
 An information website for Campus Bites, a fictional university cafeteria. Students and staff can check the menu, the daily special and combo deals, how to place an order, and how to contact the cafeteria.
 
-Built for DevOps Fundamentals (SEST4663), Assignment 01, Fall 2026. Plain HTML and CSS. No backend.
+Built for DevOps Fundamentals (SEST4663), Assignment 01, Fall 2026. HTML and CSS, with a short script for the theme switch. No backend.
 
 ## Pages
 
@@ -18,7 +18,15 @@ All five pages use one stylesheet, `styles/style.css`. Each owner adds their sty
 
 ## Run it
 
-Open `src/index.html` in a browser. There is nothing to install.
+Open `src/index.html` in a browser. There is nothing to install. Photos and fonts load from the internet, so the pages look plain offline.
+
+## Light and dark theme
+
+The switch in the header is a hidden checkbox. CSS changes the colors with the `:has()` selector, and a 6-line script under each page's header saves the choice in `localStorage`, so the next page opens in the same theme.
+
+## Photos
+
+All photos come from [Unsplash](https://unsplash.com) and are linked from there, not stored in this repository.
 
 ## Branches
 
