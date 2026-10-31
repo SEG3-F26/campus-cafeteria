@@ -139,9 +139,12 @@
      transform: rotate(-3deg);
    }
 
-    .nav ul {
-    flex-wrap: wrap;
-  }
+   .nav ul {
+     display: flex;
+     align-items: center;
+     gap: 8px;
+     flex-wrap: wrap;
+   }
 
 
    .nav a {
