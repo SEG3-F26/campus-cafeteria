@@ -4,10 +4,105 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Campus Bites | How to Order</title>
+  <meta name="description" content="How to place an order at Campus Bites, with peak hours and pick-up rules.">
   <link rel="stylesheet" href="../styles/style.css">
 </head>
 <body>
-  <h1>How to order</h1>
-  <p>This page is coming soon.</p>
+  <header class="site-header">
+    <div class="container">
+      <a class="brand" href="index.html">Campus <span>Bites</span></a>
+      <nav class="nav" aria-label="Main">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="menu.html">Menu</a></li>
+          <li><a href="deals.html">Deals</a></li>
+          <li><a href="order.html" aria-current="page">How to order</a></li>
+          <li><a href="feedback.html">Feedback</a></li>
+          <li>
+            <label class="theme-toggle" for="theme-switch">
+              <input type="checkbox" id="theme-switch" aria-label="Dark theme">
+              <span class="theme-toggle-knob" aria-hidden="true"></span>
+              <span class="theme-toggle-label"></span>
+            </label>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <script>
+    // Remember the light or dark choice between pages
+    const themeSwitch = document.getElementById("theme-switch");
+    themeSwitch.checked = localStorage.getItem("theme") === "dark";
+    themeSwitch.addEventListener("change", function () {
+      localStorage.setItem("theme", themeSwitch.checked ? "dark" : "light");
+    });
+  </script>
+
+  <main>
+    <section class="page-intro container">
+      <h1>How to order</h1>
+      <p>Counter, token, screen, food.</p>
+    </section>
+
+    <section class="container">
+      <ol class="steps">
+        <li>
+          <h3>Choose</h3>
+          <p>Check the board above the counter.</p>
+        </li>
+        <li>
+          <h3>Pay</h3>
+          <p>Cash or card at the counter.</p>
+        </li>
+        <li>
+          <h3>Keep your token</h3>
+          <p>The number is on your receipt.</p>
+        </li>
+        <li>
+          <h3>Collect</h3>
+          <p>Your number shows on the screen. Show the token at the pick-up window.</p>
+        </li>
+      </ol>
+    </section>
+
+    <section class="section container">
+      <div class="rules">
+        <div class="peak">
+          <h2>Peak hours</h2>
+          <dl class="peak-times">
+            <div>
+              <dt>Morning break</dt>
+              <dd>10:30 - 11:15 AM</dd>
+            </div>
+            <div>
+              <dt>Lunch</dt>
+              <dd>1:00 - 2:30 PM</dd>
+            </div>
+            <div>
+              <dt>Before evening classes</dt>
+              <dd>5:00 - 5:45 PM</dd>
+            </div>
+          </dl>
+        </div>
+        <div class="pickup">
+          <h2>Pick-up rules</h2>
+          <ul>
+            <li>No token, no order.</li>
+            <li>We hold orders for 20 minutes.</li>
+            <li>Check your order at the window.</li>
+            <li>Return your tray to the rack.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p class="footer-brand">Campus Bites</p>
+      <p>Ground floor, Main Academic Block<br>Mon-Fri 8 AM - 8 PM, Sat 9 AM - 4 PM</p>
+    </div>
+  </footer>
 </body>
 </html>
