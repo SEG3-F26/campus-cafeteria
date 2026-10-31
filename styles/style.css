@@ -917,3 +917,121 @@
 
 /* ---------- End of menu page ---------- */
 
+
+/* ---------- How to order page (Member 3) ---------- */
+
+.steps {
+  counter-reset: step;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+
+.steps li {
+  counter-increment: step;
+  padding: 28px;
+  border-radius: var(--radius);
+  background: var(--surface);
+  border: 1px solid var(--line);
+}
+
+.steps li::before {
+  content: counter(step);
+  display: grid;
+  place-items: center;
+  width: 64px;
+  height: 64px;
+  margin-bottom: 48px;
+  border-radius: 50%;
+  background: var(--marigold);
+  color: var(--on-marigold);
+  font-family: var(--display);
+  font-size: 2rem;
+  font-weight: 800;
+}
+
+.steps h3 {
+  font-size: 1.5rem;
+}
+
+.steps p {
+  margin-top: 8px;
+  color: var(--muted);
+}
+
+.rules {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.peak {
+  padding: 40px;
+  border-radius: var(--radius);
+  background: var(--panel);
+  color: var(--on-panel);
+}
+
+.peak h2,
+.pickup h2 {
+  margin-bottom: 24px;
+  font-size: 2rem;
+}
+
+.peak-times div {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 16px;
+  padding-block: 14px;
+}
+
+.peak-times div + div {
+  border-top: 1px solid rgb(244 244 239 / 0.15);
+}
+
+.peak-times dd {
+  color: var(--marigold);
+  font-family: var(--mono);
+}
+
+.pickup {
+  padding: 40px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--surface);
+}
+
+.pickup li {
+  padding-block: 10px;
+  font-size: 1.125rem;
+}
+
+.pickup li + li {
+  border-top: 1px solid var(--line);
+}
+
+@media (max-width: 1000px) {
+  .steps {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 760px) {
+  .steps,
+  .rules {
+    grid-template-columns: 1fr;
+  }
+
+  .steps li::before {
+    margin-bottom: 24px;
+  }
+
+  .peak,
+  .pickup {
+    padding: 28px 24px;
+  }
+}
+
+/* ---------- End of how to order page ---------- */
+
