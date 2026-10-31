@@ -601,7 +601,9 @@
   font-weight: 700;
   letter-spacing: -0.03em;
   line-height: 1.2;
+  overflow-wrap: anywhere;
 }
+
 
 .contact-list a {
   text-decoration-color: var(--marigold);
