@@ -139,11 +139,10 @@
      transform: rotate(-3deg);
    }
 
-   .nav ul {
-     display: flex;
-     align-items: center;
-     gap: 4px;
-   }
+    .nav ul {
+    flex-wrap: wrap;
+  }
+
 
    .nav a {
      display: block;
