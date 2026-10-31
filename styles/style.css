@@ -1035,3 +1035,75 @@
 
 /* ---------- End of how to order page ---------- */
 
+
+
+/* ---------- Theme toggle (Team Lead, added after all pages are merged) ---------- */
+
+.theme-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-left: 8px;
+  padding: 6px 12px 6px 6px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  color: var(--ink);
+  font-size: 0.875rem;
+  font-weight: 600;
+  cursor: pointer;
+  user-select: none;
+}
+
+.theme-toggle input {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+}
+
+.theme-toggle-knob {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: var(--marigold);
+  box-shadow: inset -6px -2px 0 0 transparent;
+  transition: box-shadow 0.3s, background-color 0.3s;
+}
+
+.theme-toggle-label::after {
+  content: "Dark";
+}
+
+.theme-toggle:has(input:focus-visible) {
+  outline: 3px solid var(--marigold);
+  outline-offset: 2px;
+}
+
+/* Dark theme: switched on by the checkbox in the header */
+:root:has(#theme-switch:checked) {
+  --bg: #0b1813;
+  --surface: #12231c;
+  --ink: #eef0e8;
+  --muted: #a3b0a8;
+  --line: #24382f;
+  --panel: #1a3a2e;
+  --on-panel: #eef0e8;
+  color-scheme: dark;
+}
+
+:root:has(#theme-switch:checked) .theme-toggle-knob {
+  background: var(--ink);
+  box-shadow: inset -7px -3px 0 0 var(--marigold);
+}
+
+:root:has(#theme-switch:checked) .theme-toggle-label::after {
+  content: "Light";
+}
+
+@media (max-width: 760px) {
+  .theme-toggle {
+    margin-left: 0;
+  }
+}
+
+/* ---------- End of theme toggle ---------- */
