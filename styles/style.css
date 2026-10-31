@@ -142,8 +142,10 @@
    .nav ul {
      display: flex;
      align-items: center;
-     gap: 4px;
+     gap: 8px;
+     flex-wrap: wrap;
    }
+
 
    .nav a {
      display: block;
@@ -601,7 +603,9 @@
   font-weight: 700;
   letter-spacing: -0.03em;
   line-height: 1.2;
+  overflow-wrap: anywhere;
 }
+
 
 .contact-list a {
   text-decoration-color: var(--marigold);
@@ -811,8 +815,12 @@
   font-size: 0.6875rem;
   font-weight: 700;
   letter-spacing: 0.02em;
+}
+
+.combo-sticker small:last-child {
   text-transform: uppercase;
 }
+
 
 @media (max-width: 1000px) {
   .combo-grid {
